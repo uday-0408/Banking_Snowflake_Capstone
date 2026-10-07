@@ -1,0 +1,173 @@
+version: 2
+
+models:
+  - name: banking_clean
+
+    description: >
+      Cleaned banking transaction data. The model converts raw string
+      values into appropriate Snowflake data types, standardizes text,
+      cleans malformed emails and phone numbers, and preserves source
+      ingestion metadata.
+
+    columns:
+      - name: transaction_id
+        description: "Unique identifier for the banking transaction."
+        tests:
+          - not_null
+          - unique
+
+      - name: transaction_date
+        description: "Date and time when the transaction occurred."
+        tests:
+          - not_null
+
+      - name: transaction_type
+        description: "Type of banking transaction."
+        tests:
+          - not_null
+
+      - name: amount
+        description: "Transaction amount."
+        tests:
+          - not_null
+
+      - name: currency
+        description: "Currency of the transaction."
+        tests:
+          - not_null
+
+      - name: transaction_status
+        description: "Current status of the transaction."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - SUCCESS
+                  - FAILED
+                  - REVERSED
+                  - PENDING
+                  - DECLINED
+
+      - name: payment_channel
+        description: "Channel through which the transaction was initiated."
+
+      - name: payment_method
+        description: "Payment method used for the transaction."
+
+      - name: running_balance
+        description: "Account balance associated with the transaction."
+
+      - name: is_flagged_fraud
+        description: "Indicates whether the transaction is flagged as fraudulent."
+
+      - name: customer_id
+        description: "Business identifier of the customer."
+        tests:
+          - not_null
+
+      - name: customer_name
+        description: "Customer's name."
+
+      - name: customer_dob
+        description: "Customer date of birth."
+
+      - name: customer_gender
+        description: "Customer gender."
+
+      - name: customer_email
+        description: "Cleaned customer email address."
+
+      - name: customer_phone
+        description: "Cleaned customer phone number."
+
+      - name: customer_city
+        description: "Customer city."
+
+      - name: customer_country
+        description: "Customer country."
+
+      - name: customer_segment
+        description: "Customer segment."
+
+      - name: kyc_status
+        description: "Customer KYC status."
+
+      - name: customer_annual_income
+        description: "Customer annual income."
+
+      - name: credit_score
+        description: "Customer credit score."
+
+      - name: account_id
+        description: "Business identifier of the account."
+        tests:
+          - not_null
+
+      - name: account_type
+        description: "Type of bank account."
+
+      - name: account_open_date
+        description: "Date when the account was opened."
+
+      - name: account_status
+        description: "Current account status."
+
+      - name: branch_id
+        description: "Business identifier of the branch."
+        tests:
+          - not_null
+
+      - name: branch_name
+        description: "Name of the bank branch."
+
+      - name: credit_card_id
+        description: "Business identifier of the credit card."
+
+      - name: card_type
+        description: "Credit card type."
+
+      - name: card_network
+        description: "Credit card network."
+
+      - name: credit_limit
+        description: "Credit card limit."
+
+      - name: card_status
+        description: "Credit card status."
+
+      - name: loan_id
+        description: "Business identifier of the loan."
+
+      - name: loan_type
+        description: "Type of loan."
+
+      - name: loan_amount
+        description: "Loan principal amount."
+
+      - name: interest_rate
+        description: "Loan interest rate."
+
+      - name: tenure_months
+        description: "Loan tenure in months."
+
+      - name: loan_status
+        description: "Current loan status."
+
+      - name: complaint_id
+        description: "Business identifier of the complaint."
+
+      - name: complaint_category
+        description: "Category of customer complaint."
+
+      - name: complaint_priority
+        description: "Priority of customer complaint."
+
+      - name: complaint_status
+        description: "Current complaint status."
+
+      - name: source_file_name
+        description: "Source file from which the record was loaded."
+
+      - name: loaded_at
+        description: "Timestamp when the record was loaded into Bronze."

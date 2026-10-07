@@ -1,0 +1,45 @@
+# Data files & Datasets
+Data/
+*.csv
+*.xlsx
+*.parquet
+*.jsonl
+*.zip
+*.gz
+*.tar.gz
+
+# IDE / Editor config
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# dbt
+target/
+dbt_packages/
+dbt_internal_packages/
+logs/
+*.log
+
+# Airflow & Astronomer
+banking_airflow/.astro/
+banking_airflow/.venv/
+airflow_settings.yaml
+airflow-webserver.pid
+webserver_config.py
+airflow.cfg
+airflow.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Secrets & Environment variables
+.env
+*.pem

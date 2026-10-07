@@ -1,0 +1,6 @@
+services:
+  scheduler:
+    volumes:
+      - D:/Knexai/Learning/Banking_snowflake/banking_dbt/banking_models:/usr/local/airflow/dbt:rw
+      - D:/Knexai/Learning/Banking_snowflake/Data:/usr/local/airflow/data/raw:ro
+      - C:/Users/MEET/.dbt/profiles.yml:/home/astro/.dbt/profiles.yml
