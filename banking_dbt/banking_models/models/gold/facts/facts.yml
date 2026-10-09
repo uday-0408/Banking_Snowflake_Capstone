@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: fact_complaint
+    description: 'Gold layer model: fact_complaint'
+  - name: fact_loan
+    description: 'Gold layer model: fact_loan'
+  - name: fact_transaction
+    description: 'Gold layer model: fact_transaction'

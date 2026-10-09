@@ -1,3 +1,5 @@
+-- depends_on: {{ ref('fact_transaction') }}
+-- depends_on: {{ ref('dim_date') }}
 {{ config(materialized='view', schema='gold') }}
 
 WITH monthly_value AS (

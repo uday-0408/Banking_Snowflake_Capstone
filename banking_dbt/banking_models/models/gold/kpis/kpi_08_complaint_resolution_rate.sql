@@ -1,3 +1,5 @@
+-- depends_on: {{ ref('dim_branch') }}
+-- depends_on: {{ ref('fact_complaint') }}
 {{ config(materialized='view', schema='gold') }}
 
 SELECT 

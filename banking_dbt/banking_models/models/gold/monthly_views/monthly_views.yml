@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: monthly_branch_performance_view
+    description: 'Gold layer model: monthly_branch_performance_view'
+  - name: monthly_customer_performance_view
+    description: 'Gold layer model: monthly_customer_performance_view'
+  - name: monthly_transaction_view
+    description: 'Gold layer model: monthly_transaction_view'

@@ -1,5 +1,5 @@
 {{ config(
-    materialized='table',
+    materialized='incremental',
     schema='silver'
 ) }}
 
@@ -7,6 +7,9 @@ WITH source_data AS (
 
     SELECT *
     FROM {{ source('bronze', 'banking_raw') }}
+    {% if is_incremental() %}
+    WHERE loaded_at > (SELECT COALESCE(MAX(loaded_at), '1900-01-01') FROM {{ this }})
+    {% endif %}
 
 ),
 

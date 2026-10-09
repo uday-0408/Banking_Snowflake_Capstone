@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: kpi_01_avg_transaction_amount
+    description: 'Gold layer model: kpi_01_avg_transaction_amount'
+  - name: kpi_02_payment_method_usage
+    description: 'Gold layer model: kpi_02_payment_method_usage'
+  - name: kpi_03_transaction_success_rate
+    description: 'Gold layer model: kpi_03_transaction_success_rate'
+  - name: kpi_04_transaction_value_by_segment
+    description: 'Gold layer model: kpi_04_transaction_value_by_segment'
+  - name: kpi_05_mom_transaction_value
+    description: 'Gold layer model: kpi_05_mom_transaction_value'
+  - name: kpi_06_estimated_interest_income
+    description: 'Gold layer model: kpi_06_estimated_interest_income'
+  - name: kpi_07_subprime_default_rate
+    description: 'Gold layer model: kpi_07_subprime_default_rate'
+  - name: kpi_08_complaint_resolution_rate
+    description: 'Gold layer model: kpi_08_complaint_resolution_rate'
+  - name: kpi_09_complaint_priority_distribution
+    description: 'Gold layer model: kpi_09_complaint_priority_distribution'
+  - name: kpi_10_top_5_customers_net_exposure
+    description: 'Gold layer model: kpi_10_top_5_customers_net_exposure'

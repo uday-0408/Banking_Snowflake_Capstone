@@ -1,0 +1,26 @@
+IU_Account:
+  outputs:
+    dev:
+      account: ZBGJUPU-BY01332
+      user: IU_DBT_SERVICE_2
+      password: Pass@123456789
+      role: DBT_MACHINE
+      warehouse: COMPUTE_WH
+      database: CAPSTONE_EXAM
+      schema: PRACTICE
+      threads: 1
+      type: snowflake
+  target: dev
+banking_models:
+  outputs:
+    dev:
+      account: ZBGJUPU-BY01332
+      user: IU_DBT_SERVICE_2
+      password: Pass@123456789
+      role: DBT_MACHINE
+      warehouse: COMPUTE_WH
+      database: CAPSTONE_EXAM
+      schema: PRACTICE
+      threads: 1
+      type: snowflake
+  target: dev

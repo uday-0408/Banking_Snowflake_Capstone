@@ -1,3 +1,5 @@
+-- depends_on: {{ ref('fact_transaction') }}
+-- depends_on: {{ ref('dim_customer') }}
 {{ config(materialized='view', schema='gold') }}
 
 SELECT 

@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_branch
+    description: 'Gold layer model: dim_branch'
+  - name: dim_customer
+    description: 'Gold layer model: dim_customer'
+  - name: dim_date
+    description: 'Gold layer model: dim_date'

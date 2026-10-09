@@ -1,3 +1,4 @@
+-- depends_on: {{ ref('banking_clean') }}
 {{ config(
     materialized='incremental',
     schema='gold',

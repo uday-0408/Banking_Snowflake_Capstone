@@ -1,3 +1,7 @@
+-- depends_on: {{ ref('fact_transaction') }}
+-- depends_on: {{ ref('fact_loan') }}
+-- depends_on: {{ ref('dim_customer') }}
+-- depends_on: {{ ref('dim_branch') }}
 {{ config(materialized='view', schema='gold') }}
 
 WITH loan_repayments AS (

@@ -1,3 +1,6 @@
+-- depends_on: {{ ref('fact_transaction') }}
+-- depends_on: {{ ref('dim_date') }}
+-- depends_on: {{ ref('dim_branch') }}
 {{ config(materialized='view', schema='gold') }}
 
 WITH branch_monthly AS (
