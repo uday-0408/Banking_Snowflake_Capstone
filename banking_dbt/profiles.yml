@@ -3,7 +3,7 @@ IU_Account:
     dev:
       account: ZBGJUPU-BY01332
       user: IU_DBT_SERVICE_2
-      password: Pass@123456789
+      password: Pass@1234567890
       role: DBT_MACHINE
       warehouse: COMPUTE_WH
       database: CAPSTONE_EXAM
@@ -16,7 +16,7 @@ banking_models:
     dev:
       account: ZBGJUPU-BY01332
       user: IU_DBT_SERVICE_2
-      password: Pass@123456789
+      password: Pass@1234567890
       role: DBT_MACHINE
       warehouse: COMPUTE_WH
       database: CAPSTONE_EXAM
